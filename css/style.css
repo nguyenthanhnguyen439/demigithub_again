@@ -1,0 +1,344 @@
+* {
+    font-size: 16px;
+}
+
+header .logo i {
+    color: green;
+    font-size: 2.5rem;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .logo span img{
+    width: 100% ;
+}
+header .logo span {
+    font-size: 2rem;
+}
+
+.menu .nav-item {
+    margin: 0 0.8rem;
+}
+
+.menu .nav-item a{
+    color: white !important;
+}
+
+.menu .nav-item a::after {
+    /* [ content ]: luôn đi kèm khi tạo affter. người dùng có thể cho giá trị cho content */
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+/* cố định thẻ a  trang chủ home có màu xanh */
+.menu .nav-item.active a::after {
+    width: 100%;
+    color: #35a22c;
+}
+
+/* hover các thẻ có màu xanh */
+.menu .nav-item:hover a::after {
+    width: 100%;
+}
+
+.menu .nav-item.active a {
+    /* !important quan trọng ưu tiên đè lên css của boostrap4 */
+    color: #35a22c !important;
+}
+
+.menu .nav-item:hover a {
+    color: #35a22c !important;
+}
+
+/* CAROUSEL */
+
+.carousel-item {
+    /* 100vh giúp ảnh của carousel tràn full màn hình */
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+
+}
+.overplay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0 , 0 , 0.5);
+    width: 100%;
+    height: 100%;
+
+}
+.carousel-item:nth-child(1) {
+    background-image: url(../img/finland.jpg);
+
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(../img/mountains.jpg);
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(../img/mountains-1.jpg);
+}
+
+.carousel-indicators {
+    bottom: 10%;
+}
+
+.carousel-control-next, .carousel-control-next, .carousel-control-prev, .carousel-control-prev {
+    visibility: hidden
+};
+
+.carousel-control-next-icon, .carousel-item .carousel-control-prev-icon {
+    visibility: hidden !important;
+}
+
+.carousel-item h3{
+    font-size: 50px;
+    font-weight: 400 !important ;
+    margin-bottom: 20px !important;
+}
+
+.carousel-item .myCarousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+}
+
+.carousel-item  p{
+    font-size: 23px;
+}
+
+.carousel__thumb {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.carousel__thumb img {
+    border-radius: 50%;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%
+}
+
+.carousel-indicators li.active {
+    background-color: #35a22c;
+}
+
+/* PROJECT */
+#project{
+    padding: 52px 0 100px 0;
+}
+
+#project .project__title {
+    text-align: center !important;
+    
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #35a22c;
+}
+
+.project__content .nav{
+    justify-content: center;
+}
+
+.nav-item .nav-link{
+    background-color: transparent; 
+    color: gray;
+    /* border: 1px solid gray; */
+    margin-left: 10px;
+}
+.nav-item .nav-link.active{
+    background-color: #35a22c !important;
+    border: 1px solid #35a22c; 
+    color: white !important;
+}
+
+.project__content .tab-content{
+    margin-top: 18px;
+}
+
+.project__content .card-body {
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px #000033;
+    transition: all 0.1s;
+}
+
+.project__content .card {
+    /* [ overflow ]: cắt / loại bỏ phần dư vượt khỏi khung của thẻ cha */
+    height: 100%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 13%);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 0 30px 30px;
+} 
+
+.project__content .card:hover h4 {
+    color: green;
+}
+
+.project__content .card h4 {
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.project__content .card:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+    border-radius: 0 0 30px 30px;
+}
+/* service */
+#service{
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 100px;
+}
+#service .overplay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0 , 0 , 0.6);
+}
+#service .service__title{
+    position: relative;
+}
+.service__content .card{
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: #ffffff2b;
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: all 0.5s;
+}
+.service__content .card:hover{
+    background-color: black;
+    border-color: white;
+}
+.service__content .card-body{
+    text-align: center;
+}
+.service__content .card-body h4{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.service__content .card-body i{
+    font-size: 48px;
+    color: green;
+}
+/* Award */
+#award {
+    position: relative;
+    color: #585858;
+    padding: 70px 0;
+}
+#award .award__bg {
+    background-image: url(../img/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.award__left {
+    background: rgba(255,255,255,.25);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 45px;
+}
+.heading h2 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1d2d;
+    font-weight: 600;
+}
+.heading p {
+    color: #585858;
+    line-height: 24px;
+}
+.award__right {
+    padding: 45px 0;
+}
+#award .container__aw {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Footer */
+footer {
+    background-color: #222;
+}
+footer .footer__icon {
+    margin-left: 10px;
+}
+footer .footer__icon a {
+    color: #aaa;
+    margin-right: 1rem;
+}
+footer .footer__icon i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: all .5s;
+}
+footer .footer__icon i:hover {
+    border-color: #35a22c;
+    color: #35a22c;
+}
+.footer__copies {
+    border-top: 1px solid #454545;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+.footer__copies p {
+    color: #aaa;
+    margin: 0;
+}
